@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Form</h1>
+        <input type="text" id="name1" placeholder="First name">
+        <input type="text" id="name2" placeholder="Last name">
+        <input type="number" id="roll" placeholder="Enrollment number">
+        <input type="text" id="course" placeholder="Course name">
+        <input type="text" id="branch" placeholder="Branch name">
+        <input type="number" id="sem" placeholder="Semester">
+        <input type="text" id="uni" placeholder="University name">
+        <input type="text" id="email" placeholder="Email">
+        <input type="number" id="phone" placeholder="Phone number">
+        <button onclick="Form()">Submit</button>
+    </div>
+
+    <script>
+        function Form() {
+            let detail = {}
+            detail.name1 = document.getElementById("name1").value;
+            detail.name2 = document.getElementById("name2").value;
+            detail.roll = document.getElementById("roll").value;
+            detail.course = document.getElementById("course").value;
+            detail.branch = document.getElementById("branch").value;
+            detail.sem = document.getElementById("sem").value;
+            detail.uni = document.getElementById("uni").value;
+            detail.email = document.getElementById("email").value;
+            detail.phone = document.getElementById("phone").value;
+
+            console.log(detail);
+            document.write("First name: " + detail.name1 + "<br>");
+            document.write("Last name: " + detail.name2 + "<br>");
+            document.write("Enrollment number: " + detail.roll + "<br>");
+            document.write("Course name: " + detail.course + "<br>");
+            document.write("Branch name: " + detail.branch + "<br>");
+            document.write("Semester: " + detail.sem + "<br>");
+            document.write("University name: " + detail.uni + "<br>");
+            document.write("Email: " + detail.email + "<br>");
+            document.write("Phone number: " + detail.phone + "<br>");
+        }
+    </script>
+</body>
+</html>
